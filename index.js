@@ -1,5 +1,10 @@
 // code your solution here
-function superbowlWin(
-    year, month = 12, dayOfMonth = 30) {
-
+function superbowlWin (superbowlRecords) {
+    const winningRecord = superbowlRecords.find(record => record.result === "W");
+    if (winningRecord) {
+        return winningRecord.year;
+    } else{
+        return undefined;
     }
+}
+
